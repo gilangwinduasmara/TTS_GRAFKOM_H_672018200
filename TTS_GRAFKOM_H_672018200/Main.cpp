@@ -77,6 +77,16 @@ void fourDots(float x, float y) {
 	circle(x, y-30, 10.0);
 }
 
+void redCoreSmall(float x, float y) {
+	glColor3f(RED);
+	glBegin(GL_LINE_LOOP);
+	glVertex2f(x, y + 25);
+	glVertex2f(x - 25, y);
+	glVertex2f(x, y - 25);
+	glVertex2f(x + 25, y);
+	glEnd();
+}
+
 void redCore(float x, float y) {
 	glLineWidth(10.0);
 	for (int i = 1; i <= 3; i++) {
