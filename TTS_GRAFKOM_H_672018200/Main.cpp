@@ -78,8 +78,7 @@ void fourDots(float x, float y) {
 }
 
 void redCoreSmall(float x, float y) {
-	glColor3f(RED);
-	glBegin(GL_LINE_LOOP);
+	glBegin(GL_QUADS);
 	glVertex2f(x, y + 25);
 	glVertex2f(x - 25, y);
 	glVertex2f(x, y - 25);
@@ -132,8 +131,10 @@ void display() {
 	glPointSize(5.0);
 	glClear(GL_COLOR_BUFFER_BIT);
 
-	
 	glColor3f(RED);
+	
+	redCoreSmall(-300, 0);
+	redCoreSmall(620, 0);
 	redCore(150.0, 0.0);
 	redCore(-305.0, 500);
 	redCore(-305.0, -500);
